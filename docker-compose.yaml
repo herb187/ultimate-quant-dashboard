@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  timescaledb:
+    image: timescale/timescaledb:latest-pg14
+    container_name: quant_dashboard_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=quant_user
+      - POSTGRES_PASSWORD=quant_password
+      - POSTGRES_DB=market_data
+    volumes:
+      - tsdb_data:/home/postgres/pgdata/data
+
+volumes:
+  tsdb_data:
