@@ -7,6 +7,10 @@ __pycache__/
 env/
 venv/
 
+# Daily Topic Aggregator
+topic_aggregator.db
+.streamlit/secrets.toml
+
 # Docker
 postgres_data/
 
